@@ -1,25 +1,21 @@
 public class ATM {
     private int moneyAmount;
-    private int cashAdd;
-    private int cashWithdraw;
     private int moneyATM = 1_000_000;
 
-    public ATM(int moneyAmount, int cashAdd, int cashWithdraw) {
+    public ATM(int moneyAmount) {
         this.moneyAmount = moneyAmount;
-        this.cashAdd = cashAdd;
-        this.cashWithdraw = cashWithdraw;
     }
 
     public int getMoneyAmount() {
         return moneyAmount;
     }
 
-    public int moneyInput() {
+    public int moneyInput(int cashAdd) {
         moneyAmount = moneyAmount + cashAdd;
         return moneyAmount;
     }
 
-    public int moneyWithdrawal() {
+    public int moneyWithdrawal(int cashWithdraw) {
         if (cashWithdraw > moneyATM) {
             cashWithdraw = 0;
             return cashWithdraw;
@@ -29,5 +25,6 @@ public class ATM {
     }
 
 }
+
 
 
